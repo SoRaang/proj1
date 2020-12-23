@@ -12,6 +12,6 @@ $(document).ready(() => { // jQuery Load
     });
 
     $('.sitemap_close').click(function() {
-        $(this).parent('aside').slideUp();
+        $(this).parents('aside').slideUp();
     });
 }) // jQuery Closed
