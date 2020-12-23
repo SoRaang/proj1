@@ -182,10 +182,10 @@ aside#mnuSitemap h1#logo {
 span.sitemap_close {
     display: block;
     position: absolute;
-    top: 6rem;
+    top: 1.5rem;
     right: .5rem;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
 }
 
@@ -291,7 +291,7 @@ ul#mnuDepth1 {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-content: center;
-    font-size: .75rem;
+    font-size: 1rem; /* .75rem */
     font-weight: 300;
     line-height: .75rem;
 }
@@ -323,6 +323,10 @@ ul#mnuDepth1 > li.mnuIcon > a {
 @media screen and (max-width: 66rem) {
     aside#mnuQuick {
         display: none;
+    }
+
+    ul#mnuDepth1 {
+        font-size: .75rem;
     }
 
     ul#mnuDepth1 > li.mnuIcon {

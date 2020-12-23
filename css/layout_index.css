@@ -25,19 +25,38 @@ div#topBanner {
 }
 
 span.close {
-    display:block;
+    display: block;
     position: absolute;
-    bottom: .5rem;
-    right: calc(50% - 25rem);
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, .5);
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.4rem;
+    top: calc(50% - 1.5rem);
+    right: calc(50% - 26rem);
+    width: 3rem;
+    height: 3em;
+    border-radius: .15rem;
+    background: rgba(0, 0, 0, .7);
+    text-indent: -500000%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+span.close::before,
+span.close::after {
+    display: block;
+    position: absolute;
+    top: calc(50% - .05rem);
+    left: 10%;
+    width: 80%;
+    height: .1rem;
+    border-radius: .05rem;
+    background: #fff;
+    content: '';
+}
+
+span.close::before {
     transform: rotate(45deg);
+}
+
+span.close::after {
+    transform: rotate(-45deg);
 }
 
 /* 우선/예외 선언 종료 */
@@ -310,6 +329,7 @@ section#secIntro > div > p {
     box-shadow: 0 .5rem .75rem rgba(0, 0, 0, .1);
     text-indent: -500000%;
     overflow: hidden;
+    transition: .2s;
 }
 
 section#secIntro > div > p > a {
@@ -330,9 +350,19 @@ section#secIntro > div > p:last-of-type {
     background-size: cover;
 }
 
+section#secIntro > div > p:hover {
+    box-shadow: 0 .75rem 1rem rgba(0, 0, 0, .2);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
 /* ---------- 시술소개 부분 종료 ---------- */
 
-section#secCompare::after {
+section#secCompare div.int_wrap {
+    position: relative;
+}
+
+section#secCompare div.int_wrap::after {
     clear: both;
     display: block;
     content: '';
@@ -364,11 +394,10 @@ section#secCompare div.title_text p {
 }
 
 section#secCompare div.slideCompare {
-    float: left;
-    margin-top: 2rem;
-    margin-left: 1.5rem;
-    width: 42.75rem;
-    height: 15rem;
+    position: absolute;
+    bottom: 0;
+    left: 21rem;
+    width: 100rem;
     box-shadow: 0 .5rem .75rem rgba(0, 0, 0, .1);
 }
 
@@ -377,6 +406,27 @@ section#secCompare div.slideCompare article {
     width: 21rem;
     height: 15rem;
     box-sizing: border-box;
+}
+
+section#secCompare div.slideCompare article > p {
+    position: absolute;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .7);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    transition: .3s;
+}
+
+section#secCompare div.slideCompare article p > span {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: .75rem;
 }
 
 section#secCompare div.slideCompare article a {
@@ -410,7 +460,19 @@ section#secCompare div.slideCompare article::after {
     content: 'AFTER';
 }
 
+section#secCompare div.slideCompare article:hover > p {
+    left: 0;
+}
+
 @media screen and (max-width: 66rem) {
+    section#slideMain .slick-dots,
+    section#slideMain .slick-prev,
+    section#slideMain .slick-next {
+        bottom: auto;
+        top: 1.5rem;
+    }
+
+    /*
     section#secCompare div.title_img {
         display: none;
     }
@@ -447,6 +509,7 @@ section#secCompare div.slideCompare article::after {
         margin: 0 .5rem;
         width: calc(100% - 1rem);
     }
+    */
 }
 
 /* ---------- 시술전후 부분 종료 ---------- */

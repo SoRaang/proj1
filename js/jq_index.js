@@ -19,7 +19,7 @@ $(document).ready(() => { // jQuery Load
         autoplay: true,
         autoplaySpeed: 4000,
         pauseOnHover: false,
-        slidesToShow: 2,
+        slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
         prevArrow: $('.comp_prev'),

@@ -54,6 +54,18 @@ button.slick-next {
     transform: rotate(135deg);
 }
 
+.slideCompare {
+    overflow: initial;
+}
+
+.slideCompare .slick-slide {
+    margin-right: .75rem;
+    width: 21rem;
+    height: 15rem;
+    box-shadow: 0 .5rem .75rem rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
 .slideCompare button.slick-prev,
 .slideCompare button.slick-next {
     bottom: auto;
@@ -62,10 +74,54 @@ button.slick-next {
 
 button.comp_prev,
 button.comp_next {
+    position: relative;
     margin-top: 1rem;
     width: 4.5rem;
     height: 2rem;
-    background: #e3e3e3;
     font-size: .75rem;
     color: #333;
+}
+
+button.comp_prev {
+    text-indent: 1rem;
+}
+
+button.comp_next {
+    text-indent: -1rem;
+}
+
+button.comp_prev::before,
+button.comp_next::before {
+    display: block;
+    position: absolute;
+    bottom: .3rem;
+    left: 10%;
+    width: 80%;
+    height: .1rem;
+    border-radius: .05rem;
+    background: #999;
+    content: '';
+}
+
+button.comp_prev::after,
+button.comp_next::after {
+    display: block;
+    position: absolute;
+    bottom: .35rem;
+    width: .1rem;
+    height: 70%;
+    border-radius: .05rem;
+    background: #999;
+    transform-origin: 50% 100%;
+    content: '';
+}
+
+button.comp_prev::after {
+    left: 10%;
+    transform: rotate(45deg);
+}
+
+button.comp_next::after {
+    right: 10%;
+    transform: rotate(-45deg);
 }
