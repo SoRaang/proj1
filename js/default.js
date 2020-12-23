@@ -8,10 +8,10 @@ $(document).ready(() => { // jQuery Load
     });
 
     $('.btnBurger').click(function() {
-        $('#mnuSitemap').animate({'right': '0'});
+        $('#mnuSitemap').slideDown();
     });
 
     $('.sitemap_close').click(function() {
-        $(this).parent('aside').animate({'right': '-100%'});
+        $(this).parent('aside').slideUp();
     });
 }) // jQuery Closed
