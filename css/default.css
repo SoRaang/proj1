@@ -1,0 +1,421 @@
+/* CWK Default CSS Ver. 202012 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px; /* Size-Adjustment Base : 20px */
+    font-weight: 300;
+    color: #2e2e2e;
+}
+
+body {
+    font-size: 1rem; /* Base-Font Size : 20px */
+    line-height: 1rem; /* Base-Line Height : Follow Container-Font Size */
+    overflow-x: hidden;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+img {
+    border: none;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    outline: none;
+    transition: .2s;
+}
+
+a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #78c5ae;
+}
+
+form,
+fieldset {
+    border: none;
+}
+
+input,
+textarea,
+select,
+button {
+    border: none;
+    background: none;
+    vertical-align: middle;
+}
+
+hr {
+    clear: both;
+    border: none;
+    background: rgba(0, 0, 0, 1);
+}
+
+address {
+    font-style: normal;
+}
+
+.scr_alt {
+    display: block;
+    height: 0;
+    text-indent: -500000%;
+}
+
+/* -------------------- 공통 레이아웃 -------------------- */
+
+aside#mnuQuick {
+    position: fixed;
+    bottom: 10%;
+    left: calc(50% + 33.5rem);
+    width: 3rem;
+    z-index: 498;
+}
+
+aside#mnuQuick > ul {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+
+aside#mnuQuick > ul > li {
+    margin-bottom: .75rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: #333;
+    text-indent: -500000%;
+    transition: .3s;
+    overflow: hidden;
+}
+
+aside#mnuQuick > ul > li:last-child {
+    margin-bottom: 0;
+    height: 1.5rem;
+    border-radius: .75rem;
+    font-size: .65rem;
+    font-weight: 900;
+    color: #e3e3e3;
+    line-height: 1.5rem;
+    text-align: center;
+    text-indent: 0;
+}
+
+aside#mnuQuick > ul li:hover {
+    background: #78c5ae;
+}
+
+aside#mnuQuick > ul > li > a,
+aside#mnuQuick > ul > li > a:hover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #e3e3e3;
+}
+
+li.btn_cal a {
+    background: url('../images/ico_cal.png') no-repeat center;
+    background-size: 2rem;
+}
+
+li.btn_bbs a {
+    background: url('../images/ico_bbs.png') no-repeat center;
+    background-size: 2rem;
+}
+
+li.btn_prom a {
+    background: url('../images/ico_prom.png') no-repeat center;
+    background-size: 2rem;
+}
+
+li.btn_where a {
+    background: url('../images/ico_where.png') no-repeat center;
+    background-size: 2rem;
+}
+
+header#headIndex {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1);
+    z-index: 500;
+}
+
+div.head_wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+h1#logo {
+    margin: 0;
+    width: 11rem;
+    height: 3.75rem;
+    background: url('../images/logo_color.png') no-repeat center;
+    background-size: contain;
+    line-height: 3.75rem;
+    text-indent: -500000%;
+}
+
+h1#logo > a {
+    display: block;
+}
+
+nav#navMain {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    height: 3.75rem;
+}
+
+ul#mnuDepth1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    font-size: .75rem;
+    font-weight: 300;
+    line-height: .75rem;
+}
+
+ul#mnuDepth1 > li {
+    padding: 1.5rem .5rem;
+    box-sizing: border-box;
+}
+
+ul#mnuDepth1 > li.mnuIcon {
+    padding: 1.25rem 1rem;
+    width: 1.2rem;
+    height: 1.25rem;
+    box-sizing: initial;
+    text-indent: -500000%;
+}
+
+ul#mnuDepth1 > li.mnuIcon::after {
+    display: none;
+}
+
+ul#mnuDepth1 > li.mnuIcon > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+
+@media screen and (max-width: 66rem) {
+    aside#mnuQuick {
+        display: none;
+    }
+
+    ul#mnuDepth1 > li.mnuIcon {
+        padding: 1.25rem .25rem;
+        width: .8rem;
+    }
+}
+
+a.btnBurger {
+    background: url('../images/btnBurger.png') no-repeat center;
+}
+
+a.btnSearch {
+    background: url('../images/btnSearch.png') no-repeat center;
+}
+
+a.btnLogin {
+    background: url('../images/btnLogin.png') no-repeat center;
+}
+
+a.btnLang {
+    background: url('../images/south-korea.png') no-repeat center;
+}
+
+ul#mnuDepth1 > li::after {
+    display: block;
+    margin-left: -.5rem;
+    margin-top: 1.25rem;
+    width: 0;
+    height: .25rem;
+    background: #43724b;
+    opacity: 0;
+    transition: .3s;
+    content: '';
+}
+
+ul#mnuDepth1 > li:hover {
+    color: #78c5ae;
+}
+
+ul#mnuDepth1 > li:hover::after {
+    width: calc(100% + 1rem);
+    opacity: 1;
+}
+
+ul#mnuDepth1 > li:hover > ul.mnuDepth2 {
+    display: flex;
+}
+
+ul.mnuDepth2 {
+    display: none; /* flex */
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 3.75rem;
+    left: 0;
+    width: 100%;
+    height: 3.75rem;
+    background: rgba(0, 0, 0, .6);
+    font-weight: 400;
+    color: #fff;
+}
+
+ul.mnuDepth2 > li {
+    position: relative;
+    padding: 1.5rem .5rem;
+    margin-right: .75rem;
+}
+
+ul.mnuDepth2 > li::after {
+    display: block;
+    position: absolute;
+    top: calc(50% - .125rem);
+    right: -.5rem;
+    width: .25rem;
+    height: .25rem;
+    border-radius: 50%;
+    background: #fff;
+    content: '';
+}
+
+ul.mnuDepth2 > li:last-child {
+    margin-right: 0;
+}
+
+ul.mnuDepth2 > li:last-child::after {
+    display: none;
+}
+
+footer#footIndex {
+    margin: 3.75rem 0;
+    font-size: .75rem;
+}
+
+footer#footIndex::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+footer#footIndex h1#logo {
+    clear: left;
+    float: left;
+    margin-top: 1rem;
+    filter: grayscale();
+}
+
+footer#footIndex > div.foot_sns {
+    height: 3rem;
+    background: #f7f7f7;
+}
+
+footer#footIndex ul.int_wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    padding: .5rem 0;
+}
+
+footer#footIndex ul.int_wrap > li {
+    margin-left: .25rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: .25rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+footer#footIndex ul.int_wrap > li:first-child {
+    font-size: .65rem;
+    font-weight: 900;
+    color: #666;
+    line-height: 2rem;
+}
+
+footer#footIndex ul.int_wrap img {
+    width: 2rem;
+    height: 2rem;
+}
+
+footer#footIndex ul.foot_links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    margin-bottom: 1.25rem;
+    padding: 1rem 0;
+    height: 1rem;
+    border-bottom: .05rem solid #ccc;
+}
+
+footer#footIndex ul.foot_links li {
+    margin-right: .75rem;
+    padding-right: .75rem;
+    border-right: .05rem solid #ccc;
+}
+
+footer#footIndex ul.foot_links li:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+}
+
+a.banner01,
+a.banner02,
+a.banner03 {
+    float: left;
+    display: block;
+    margin-right: 1rem;
+    width: 10rem;
+    height: 3.5rem;
+    text-indent: -500000%;
+    overflow: hidden;
+}
+
+a.banner01 {
+    background: url('../images/banner01.jpg') no-repeat center;
+    background-size: contain;
+}
+
+a.banner02 {
+    background: url('../images/banner02.png') no-repeat center;
+    background-size: contain;
+}
+
+a.banner03 {
+    background: url('../images/banner03.png') no-repeat center;
+    background-size: contain;
+}
+
+footer#footIndex > div.int_wrap > p {
+    float: left;
+    margin: 1.5rem 0 0 1.75rem;
+}

@@ -1,0 +1,636 @@
+/* 공통 선언 시작 */
+
+#wrap { /* 전체 랩핑 */
+    position: relative;
+    width: 100%;
+    min-width: 51.2rem; /* 1024 px */
+}
+
+.int_wrap { /* 내부 박스 사이징 */
+    margin: 0 auto;
+    min-width: 51.2rem; /* 1024 px */
+    max-width: 64rem; /* 1280 px */
+}
+
+/* 공통 선언 종료 */
+/* 우선/예외 선언 시작 */
+
+div#topBanner {
+    position: relative;
+    width: 100%;
+    height: 8.5rem;
+    background: #f2efe3;
+    text-align: center;
+    overflow: hidden;
+}
+
+span.close {
+    display:block;
+    position: absolute;
+    bottom: .5rem;
+    right: calc(50% - 25rem);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .5);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4rem;
+    transform: rotate(45deg);
+}
+
+/* 우선/예외 선언 종료 */
+/* -------------------- */
+
+section#slideMain {
+    position: relative;
+}
+
+div.slide_itm a {
+    display: block;
+}
+
+div.slide_itm img {
+    width: 100%;
+}
+
+aside#noticeIndex,
+aside#keywordIndex {
+    position: absolute;
+    bottom: 2rem;
+    padding: 1rem;
+    width: 24rem;
+    height: 5rem;
+    border-radius: .25rem;
+    background: #393939;
+    box-sizing: border-box;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1);
+    font-size: .75rem;
+    color: #e3e3e3;
+    line-height: .75rem;
+    z-index: 2;
+}
+
+aside#noticeIndex {
+    left: calc(50% - 24.25rem);
+}
+
+aside#keywordIndex {
+    right: calc(50% - 24.25rem);
+}
+
+aside#noticeIndex h6,
+aside#keywordIndex h6 {
+    font-size: .75rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-indent: 1.25rem;
+}
+
+aside#noticeIndex h6::before,
+aside#keywordIndex h6::before {
+    display: block;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    content: '';
+}
+
+aside#noticeIndex h6::before {
+    background: url('../images/ico_speak.png') no-repeat center;
+    background-size: cover;
+}
+
+aside#keywordIndex h6::before {
+    background: url('../images/ico_search.png') no-repeat center;
+    background-size: cover;
+}
+
+aside#noticeIndex ul,
+aside#keywordIndex ol {
+    position: absolute;
+    bottom: 1.2rem;
+    width: calc(100% - 2rem);
+    height: 1rem;
+    line-height: 1rem;
+    overflow: hidden;
+}
+
+aside#noticeIndex ul span {
+    position: absolute;
+    right: 0;
+}
+
+aside#keywordIndex ol {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+aside#keywordIndex ol li {
+    margin-left: .75rem;
+    list-style: decimal;
+}
+
+/* ---------- 인덱스 상단 종료 ---------- */
+
+h2 {
+    display: inline-block;
+    margin: 0 0 1.5rem 0;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #707070;
+    line-height: 1.5rem;
+    vertical-align: top;
+}
+
+p.subtitle {
+    display: inline-block;
+    margin-left: 1.5rem;
+    color: #999;
+    line-height: 1.5rem;
+}
+
+section#secCompare div.title_text h2,
+section#secCompare div.title_text p {
+    display: block;
+}
+
+section#secMost {
+    padding: 3.5rem 0 2.75rem 0;
+    background: #f2fcf5;
+}
+
+section#secMost div.secMost_cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+section#secMost article {
+    position: relative;
+    margin: 0 .5rem;
+    width: 30%;
+    height: 20rem;
+    box-sizing: border-box;
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1);
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 .5rem rgba(0, 0, 0, .6);
+}
+
+section#secMost article::before,
+section#secMost article::after {
+    display: block;
+    position: absolute;
+    width: .1rem;
+    height: 0;
+    background: #fff;
+    transition: .3s .3s;
+    content: '';
+    z-index: 2;
+}
+
+section#secMost article::before {
+    bottom: .25rem;
+    left: .25rem;
+}
+
+section#secMost article::after {
+    top: .25rem;
+    right: .25rem;
+}
+
+section#secMost a {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-content: center;
+    padding: 4rem 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+section#secMost a::before,
+section#secMost a::after {
+    display: block;
+    position: absolute;
+    width: 0;
+    height: .1rem;
+    background: #fff;
+    transition: .3s;
+    content: '';
+}
+
+section#secMost a::before {
+    top: .25rem;
+    left: .25rem;
+}
+
+section#secMost a::after {
+    bottom: .25rem;
+    right: .25rem;
+}
+
+section#secMost hr {
+    display: none;
+    margin: 0 auto;
+    width: 2.75rem;
+    height: .4rem;
+    background: #fff;
+}
+
+section#secMost a p:first-of-type {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+section#secMost a p:last-of-type {
+    display: none;
+    line-height: 1.4rem;
+}
+
+section#secMost article:first-child {
+    background: url('../images/itm_most01.png') no-repeat center;
+    background-size: cover;
+}
+
+section#secMost article:nth-child(2) {
+    background: url('../images/itm_most02.png') no-repeat center;
+    background-size: cover;
+}
+
+section#secMost article:last-child {
+    background: url('../images/itm_most03.png') no-repeat center;
+    background-size: cover;
+}
+
+section#secMost article:hover::before,
+section#secMost article:hover::after {
+    height: calc(100% - .5rem);
+}
+
+section#secMost article a:hover::before,
+section#secMost article a:hover::after {
+    width: calc(100% - .5rem);
+}
+
+section#secMost a:hover {
+    color: inherit;
+    backdrop-filter: blur(.25rem) brightness(.9);
+}
+
+section#secMost a:hover hr,
+section#secMost a:hover p:last-of-type {
+    display: initial;
+}
+
+/* ---------- 주요 클리닉 부분 종료 ---------- */
+
+section#secIntro,
+section#secCompare,
+section#secMov,
+section#secNews {
+    padding: 2.75rem 0;
+}
+
+section#secIntro > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+section#secIntro > div > p {
+    margin: 0 .5rem;
+    height: 16rem;
+    box-shadow: 0 .5rem .75rem rgba(0, 0, 0, .1);
+    text-indent: -500000%;
+    overflow: hidden;
+}
+
+section#secIntro > div > p > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section#secIntro > div > p:first-of-type {
+    width: calc((100% / 3) - 1.375rem);
+    background: url('../images/itm_intro01.png') no-repeat center;
+    background-size: cover;
+}
+
+section#secIntro > div > p:last-of-type {
+    width: calc((100% / 3) * 2 - 1.375rem);
+    background: url('../images/itm_intro02.png') no-repeat center;
+    background-size: cover;
+}
+
+/* ---------- 시술소개 부분 종료 ---------- */
+
+section#secCompare::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+section#secCompare div.title_img {
+    float: left;
+    margin-left: .5rem;
+    width: 19rem;
+    height: 25rem;
+    background: url('../images/title_img.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 0 .5rem .75rem rgba(0, 0, 0, .1);
+    text-indent: -500000%;
+    overflow: hidden;
+}
+
+section#secCompare div.title_text {
+    float: left;
+    margin-left: 1.5rem;
+}
+
+section#secCompare div.title_text h2 {
+    margin: 1.5rem 0 .5rem 0;
+}
+
+section#secCompare div.title_text p {
+    margin-left: 0;
+}
+
+section#secCompare div.slideCompare {
+    float: left;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    width: 42.75rem;
+    height: 15rem;
+    box-shadow: 0 .5rem .75rem rgba(0, 0, 0, .1);
+}
+
+section#secCompare div.slideCompare article {
+    position: relative;
+    width: 21rem;
+    height: 15rem;
+    box-sizing: border-box;
+}
+
+section#secCompare div.slideCompare article a {
+    display: block;
+}
+
+section#secCompare div.slideCompare article img {
+    width: 100%;
+}
+
+section#secCompare div.slideCompare article::before,
+section#secCompare div.slideCompare article::after {
+    display: block;
+    position: absolute;
+    bottom: 1.5rem;
+    padding: .5rem;
+    font-size: .9rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+section#secCompare div.slideCompare article::before {
+    left: 0;
+    background: #b14c4c;
+    content: 'BEFORE';
+}
+
+section#secCompare div.slideCompare article::after {
+    right: 0;
+    background: #5fc17d;
+    content: 'AFTER';
+}
+
+@media screen and (max-width: 66rem) {
+    section#secCompare div.title_img {
+        display: none;
+    }
+
+    section#secCompare div.title_text {
+        float: none;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    section#secCompare div.title_text h2 {
+        display: inline-block;
+        margin: 0 0 1.5rem 0;
+    }
+
+    section#secCompare div.title_text p {
+        display: inline-block;
+        margin-left: 1.5rem;
+    }
+
+    section#secCompare div.title_text button {
+        display: inline-block;
+        margin-top: 0;
+        height: 1.5rem;
+    }
+
+    section#secCompare div.title_text button.comp_prev {
+        margin-left: 2rem;
+    }
+
+    section#secCompare div.slideCompare {
+        float: none;
+        margin-left: 0;
+        margin: 0 .5rem;
+        width: calc(100% - 1rem);
+    }
+}
+
+/* ---------- 시술전후 부분 종료 ---------- */
+
+section#secMov {
+    margin: 2.75rem 0;
+    padding: 0;
+    position: relative;
+    background: url('../images/starstory.jpg') no-repeat center;
+    background-size: cover;
+}
+
+section#secMov > div.overlayer {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2rem);
+}
+
+section#secMov div.int_wrap {
+    height: 25rem;
+    background: url('../images/starstory.jpg') no-repeat center;
+    background-size: cover;
+}
+
+section#secMov a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section#secMov h4 {
+    padding-top: 4.5rem;
+    font-size: 3rem;
+    color: #e3e3e3;
+    text-align: center;
+    text-shadow: 0 0 .75rem rgba(0, 0, 0, .5);
+}
+
+img.btn_play {
+    position: absolute;
+    top: calc(50% - 3rem);
+    left: calc(50% - 3rem);
+    width: 6rem;
+    height: 6rem;
+}
+
+/* ---------- 스타스토리 부분 종료 ---------- */
+
+section#secNews > ul.secNews_list {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex-flow: center;
+    width: 100%;
+    padding: 0 .25rem;
+    box-sizing: border-box;
+}
+
+section#secNews > ul.secNews_list::before,
+section#secNews > ul.secNews_list::after {
+    display: block;
+    position: absolute;
+    top: calc(30% - 1rem);
+    width: 2rem;
+    height: 2rem;
+    background: rgba(0, 0, 0, .6);
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 2rem;
+    z-index: 3;
+    cursor: pointer;
+}
+
+section#secNews > ul.secNews_list::before {
+    left: .5rem;
+    text-align: left;
+    content: '〈';
+}
+
+section#secNews > ul.secNews_list::after {
+    right: .5rem;
+    text-align: right;
+    content: '〉';
+}
+
+section#secNews > ul.secNews_list > li {
+    position: relative;
+    margin: 0 .25rem;
+    width: calc(25% - .5rem);
+    height: 17rem;
+    border: .05rem solid #e3e3e3;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 .5rem .75rem rgba(0, 0, 0, .1);
+    transition: .2s;
+    z-index: 1;
+}
+
+p.news_img {
+    width: 100%;
+    height: 10rem;
+    text-indent: -500000%;
+    overflow: hidden;
+}
+
+p.a1 {
+    background: url('../images/items01.png') no-repeat center;
+    background-size: cover;
+}
+
+p.a2 {
+    background: url('../images/items02.png') no-repeat center;
+    background-size: cover;
+}
+
+p.a3 {
+    background: url('../images/items03.png') no-repeat center;
+    background-size: cover;
+}
+
+p.a4 {
+    background: url('../images/items04.png') no-repeat center;
+    background-size: cover;
+}
+
+section#secNews > ul.secNews_list > li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+section#secNews > ul.secNews_list > li h5 {
+    margin: .75rem 1rem .2rem 1rem;
+    padding-bottom: .3rem;
+    width: calc(100% - 2rem);
+    border-bottom: .05rem solid #e3e3e3;
+    font-size: .75rem;
+    font-weight: bold;
+    line-height: .75rem;
+}
+
+section#secNews > ul.secNews_list > li p:last-of-type {
+    margin: 0 1rem;
+    font-size: .75rem;
+    font-weight: normal;
+}
+
+section#secNews > ul.secNews_list > li span {
+    position: absolute;
+    bottom: .5rem;
+    right: 1rem;
+    font-size: .5rem;
+    color: #999;
+}
+
+section#secNews > ul.secNews_list > li:hover {
+    box-shadow: 0 .75rem 1rem rgba(0, 0, 0, .2);
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+li.newest::before,
+li.hottest::before {
+    display: block;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    padding: .1rem .5rem;
+    border-radius: .25rem;
+    font-size: .5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+li.newest::before {
+    background: rgba(49, 189, 0, .8);
+    content: 'NEW'
+}
+
+li.hottest::before {
+    background: rgba(189, 49, 0, .8);
+    content: 'HOT'
+}
+
+/* ---------- 소식 부분 종료 ---------- */

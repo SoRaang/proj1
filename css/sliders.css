@@ -1,0 +1,71 @@
+ul.slick-dots {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    bottom: 8.5rem;
+    width: 100%;
+    z-index: 2;
+}
+
+ul.slick-dots > li {
+    margin: 0 .375rem;
+    width: .75rem;
+    height: .75rem;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+ul.slick-dots > li.slick-active {
+    width: 2rem;
+    border-radius: .375rem;
+    background: #000;
+}
+
+ul.slick-dots > li > button {
+    display: none;
+}
+
+button.slick-prev,
+button.slick-next {
+    position: absolute;
+    bottom: 8.5rem;
+    width: .75rem;
+    height: .75rem;
+    border-top: .25rem solid #000;
+    border-left: .25rem solid #000;
+    border-radius: .15rem;
+    text-indent: -500000%;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 3;
+}
+
+button.slick-prev {
+    left: calc(50% - 5.2rem);
+    transform: rotate(-45deg);
+}
+
+button.slick-next {
+    right: calc(50% - 5.2rem);
+    transform: rotate(135deg);
+}
+
+.slideCompare button.slick-prev,
+.slideCompare button.slick-next {
+    bottom: auto;
+    top: -2.5rem;
+}
+
+button.comp_prev,
+button.comp_next {
+    margin-top: 1rem;
+    width: 4.5rem;
+    height: 2rem;
+    background: #e3e3e3;
+    font-size: .75rem;
+    color: #333;
+}
